@@ -1,0 +1,7 @@
+version: '3'
+services:
+  pydefis:
+    build:
+      context: ./
+    volumes:
+      - "./:/app:cached"

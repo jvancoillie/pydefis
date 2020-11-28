@@ -1,5 +1,7 @@
-FROM python:3.5.2-slim
+FROM python:slim
 
-WORKDIR /usr/src/defis
+RUN mkdir /app
 
-COPY defis /usr/src/defis
+WORKDIR /app
+
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
